@@ -596,6 +596,10 @@ namespace Windows.UI.Xaml.Controls
 
 		protected virtual void OnItemsSourceChanged(DependencyPropertyChangedEventArgs e)
 		{
+			// Following line is commented out, since updating Items will trigger a call to SetNeedsUpdateItems() and causes unexpected results
+			// There is no effect to comment out this line, as 1) there is no sync up between Items and ItemsSource and 2) GetItems() will give precedence to ItemsSource
+			// Items?.Clear();
+
 			IsGrouping = (e.NewValue as ICollectionView)?.CollectionGroups != null;
 			SetNeedsUpdateItems();
 			ObserveCollectionChanged();
