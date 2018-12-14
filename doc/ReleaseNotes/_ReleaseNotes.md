@@ -25,6 +25,7 @@
 * All Nuget and VSIX artifacts are now Authenticode signed
 * Resource strings are now loaded from `upri` files for faster resolution
 * Add `FeatureConfiguration.Interop.ForceJavascriptInterop` to enable JS Eval fallback in Wasm mode.
+* [Android] Add support for ListViewItem instances provided via the ItemsSource property
 
 ### Breaking changes
 * Refactored ToggleSwitch Default Native XAML Styles. (cf. 'NativeDefaultToggleSwitch' styles in Generic.Native.xaml)
